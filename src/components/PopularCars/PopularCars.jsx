@@ -8,22 +8,11 @@ import car4 from "../../assets/suv2.jpg";
 import car5 from "../../assets/suv5.jpg";
 import car6 from "../../assets/suv2.jpg";
 
-import suv1 from "../../assets/suv1.jpg";
-import suv2 from "../../assets/suv2.jpg";
-import suv3 from "../../assets/suv3.jpg";
-import suv4 from "../../assets/suv4.jpg";
-import suv5 from "../../assets/suv5.jpg";
-
-import hatch1 from "../../assets/hatch1.jpg";
-import hatch2 from "../../assets/hatch2.jpg";
-import hatch3 from "../../assets/hatch3.jpg";
-import hatch4 from "../../assets/hatch4.jpg";
-
-import sedan1 from "../../assets/hatch5.jpg";
-import sedan2 from "../../assets/hatch5.jpg";
-import sedan3 from "../../assets/hatch5.jpg";
-import sedan4 from "../../assets/hatch5.jpg";
-
+import suv1 from "../../assets/work1.jpg";
+import suv2 from "../../assets/work2.jpg";
+import suv3 from "../../assets/work3.jpg";
+import suv4 from "../../assets/work4.jpg";
+import suv5 from "../../assets/work5.jpg";
 const categories = [
   "7 Sheeter",
   "5 sheeter ",
