@@ -1,0 +1,356 @@
+/* =========================================
+   PLATFORM STATS - CARZOO THEME
+========================================= */
+
+.platform-stats {
+  width: 100%;
+  background: #050505;
+  padding: 110px 0 90px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  --gold: #f2b90b;
+  --gold-light: #ffc62a;
+  --white: #ffffff;
+  --text-light: #c8c8c8;
+  --border: rgba(242, 185, 11, 0.28);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.stats-container {
+  width: 100%;
+  max-width: 1510px;
+  margin: 0 auto;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.stats-heading {
+  margin: 0 0 38px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 46px;
+  line-height: 1.15;
+  font-weight: 500;
+
+  letter-spacing: -1.5px;
+
+  color: var(--white);
+}
+
+
+/* Gold highlight on #1 */
+
+.stats-heading::first-letter {
+  color: var(--gold);
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.stats-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 10px;
+}
+
+
+/* =========================================
+   EACH STAT
+========================================= */
+
+.stat-item {
+  min-height: 300px;
+
+  padding: 35px 55px 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  border-left: 1px solid var(--border);
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* First card doesn't need left border */
+
+.stat-item:first-child {
+  border-left: none;
+}
+
+
+/* Subtle hover */
+
+.stat-item:hover {
+  transform: translateY(-4px);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.stat-number {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 96px;
+  line-height: 1;
+
+  font-weight: 700;
+
+  color: var(--gold);
+
+  letter-spacing: -4px;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 0 18px rgba(242, 185, 11, 0.08);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.stat-description {
+  max-width: 310px;
+
+  margin: 35px 0 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 23px;
+  line-height: 1.5;
+
+  font-weight: 400;
+
+  color: var(--text-light);
+}
+
+
+/* =========================================
+   LARGE LAPTOP
+========================================= */
+
+@media (max-width: 1400px) {
+
+  .platform-stats {
+    padding-top: 95px;
+    padding-bottom: 80px;
+  }
+
+  .stats-container {
+    padding: 0 45px;
+  }
+
+  .stats-heading {
+    font-size: 42px;
+  }
+
+  .stat-item {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .stat-number {
+    font-size: 80px;
+  }
+
+  .stat-description {
+    font-size: 20px;
+    max-width: 280px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .platform-stats {
+    padding: 80px 0 70px;
+  }
+
+  .stats-container {
+    padding: 0 35px;
+  }
+
+  .stats-heading {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .stat-item {
+    min-height: 260px;
+
+    padding: 30px;
+
+    border-left: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+
+  /* First column */
+
+  .stat-item:nth-child(1),
+  .stat-item:nth-child(3) {
+    border-left: none;
+  }
+
+
+  /* Bottom row */
+
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) {
+    border-bottom: none;
+  }
+
+
+  .stat-number {
+    font-size: 70px;
+    letter-spacing: -3px;
+  }
+
+
+  .stat-description {
+    margin-top: 25px;
+
+    font-size: 19px;
+    line-height: 1.45;
+
+    max-width: 330px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .platform-stats {
+    padding: 65px 0 50px;
+  }
+
+  .stats-container {
+    padding: 0 20px;
+  }
+
+
+  /* Heading */
+
+  .stats-heading {
+    font-size: 30px;
+    line-height: 1.2;
+
+    letter-spacing: -0.8px;
+
+    margin-bottom: 35px;
+  }
+
+
+  /* One column */
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .stat-item {
+    min-height: auto;
+
+    padding: 35px 15px;
+
+    border-left: none !important;
+    border-bottom: 1px solid var(--border);
+  }
+
+
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+
+  .stat-number {
+    font-size: 62px;
+    letter-spacing: -2px;
+  }
+
+
+  .stat-description {
+    max-width: 330px;
+
+    margin-top: 20px;
+
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .platform-stats {
+    padding: 50px 0 40px;
+  }
+
+  .stats-container {
+    padding: 0 18px;
+  }
+
+
+  .stats-heading {
+    font-size: 27px;
+    line-height: 1.25;
+  }
+
+
+  .stat-item {
+    padding: 30px 10px;
+  }
+
+
+  .stat-number {
+    font-size: 54px;
+  }
+
+
+  .stat-description {
+    font-size: 17px;
+  }
+}

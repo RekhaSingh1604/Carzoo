@@ -1,0 +1,939 @@
+/* =========================================================
+   POPULAR CARS - BLACK & GOLD THEME
+========================================================= */
+
+.popular-cars-section {
+  width: 100%;
+  padding: 55px 0 45px;
+
+  background: #050505;
+  color: #ffffff;
+
+  overflow: hidden;
+
+  --card-width: 397px;
+  --card-gap: 24px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.popular-cars-title {
+  margin: 0;
+
+  padding: 0 30px 32px;
+
+  text-align: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: clamp(30px, 3vw, 42px);
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  color: #f4c542;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   CATEGORY BUTTONS
+========================================================= */
+
+.category-wrapper {
+  width: max-content;
+  max-width: calc(100% - 40px);
+
+  margin: 0 auto 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.category-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   CATEGORY BUTTON
+========================================================= */
+
+.category-btn {
+  flex-shrink: 0;
+
+  height: 50px;
+
+  padding: 0 27px;
+
+  border: 1px solid rgba(244, 197, 66, 0.30);
+
+  border-radius: 32px;
+
+  background: #101010;
+
+  color: #e2e2e2;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* HOVER */
+
+.category-btn:hover {
+  border-color: #d89b16;
+
+  color: #f4c542;
+
+  background: #151515;
+
+  transform: translateY(-1px);
+}
+
+
+/* ACTIVE */
+
+.category-btn.active {
+  background: #d89b16;
+
+  border-color: #d89b16;
+
+  color: #050505;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 7px 22px rgba(216, 155, 22, 0.18);
+}
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.cars-slider-wrapper {
+  width: 100%;
+
+  overflow: hidden;
+
+  padding-left: max(
+    20px,
+    calc(
+      (100vw - (4 * var(--card-width) + 3 * var(--card-gap)))
+      / 2
+    )
+  );
+}
+
+
+.cars-slider-track {
+  display: flex;
+
+  gap: var(--card-gap);
+
+  width: max-content;
+
+  transition: transform 0.45s ease;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.car-card {
+  position: relative;
+
+  flex: 0 0 var(--card-width);
+
+  width: var(--card-width);
+
+  background: #101010;
+
+  border: 1px solid rgba(244, 197, 66, 0.14);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.35);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* CARD HOVER */
+
+.car-card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(244, 197, 66, 0.45);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.55),
+    0 0 20px rgba(216, 155, 22, 0.08);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.car-image-wrapper {
+  height: 240px;
+
+  margin: 15px 15px 0;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: #181818;
+}
+
+
+.car-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+
+/* IMAGE HOVER */
+
+.car-card:hover .car-image {
+  transform: scale(1.035);
+}
+
+
+/* =========================================================
+   HEART
+========================================================= */
+
+.heart-btn {
+  position: absolute;
+
+  top: 8px;
+  right: 9px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  background: rgba(0, 0, 0, 0.22);
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.8);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.heart-btn:hover {
+  transform: scale(1.08);
+
+  background: rgba(216, 155, 22, 0.75);
+}
+
+
+.heart-btn.liked {
+  color: #f4c542;
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.rating-badge {
+  position: absolute;
+
+  right: 8px;
+  bottom: 8px;
+
+  height: 34px;
+
+  padding: 0 10px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  background: #108344;
+
+  color: #ffffff;
+
+  border-radius: 5px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+
+.star {
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.car-details {
+  padding: 20px 19px 18px;
+}
+
+
+/* =========================================================
+   CAR NAME
+========================================================= */
+
+.car-name {
+  margin: 0 0 13px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 21px;
+
+  font-weight: 500;
+
+  line-height: 1.25;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.car-price {
+  margin-bottom: 17px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  color: #f4c542;
+}
+
+
+/* =========================================================
+   SPECS
+========================================================= */
+
+.car-specs {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 17px;
+
+  white-space: nowrap;
+
+  color: #a8a8a8;
+
+  font-size: 16px;
+
+  font-weight: 400;
+}
+
+
+.car-distance {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #a8a8a8;
+
+  font-size: 16px;
+
+  font-weight: 400;
+}
+
+
+.walk-icon {
+  font-size: 18px;
+
+  color: #d89b16;
+}
+
+
+/* =========================================================
+   PROFESSIONAL HOST
+========================================================= */
+
+.professional-host {
+  min-height: 48px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #6f4b0b,
+      #d89b16,
+      #8b620e
+    );
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  border-top:
+    1px solid rgba(244, 197, 66, 0.3);
+}
+
+
+/* HOST BADGE */
+
+.host-badge {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #050505;
+
+  border:
+    1px solid #f4c542;
+
+  color: #f4c542;
+
+  font-size: 5px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.popular-cars-description {
+  max-width: 1100px;
+
+  margin: 28px auto 8px;
+
+  padding: 0 20px;
+
+  text-align: center;
+
+  color: #9b9b9b;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   PROFESSIONAL LINK
+========================================================= */
+
+.professional-link {
+  display: block;
+
+  text-align: center;
+
+  color: #d89b16;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  text-decoration: underline;
+
+  text-underline-offset: 3px;
+
+  transition: color 0.2s ease;
+}
+
+
+.professional-link:hover {
+  color: #f4c542;
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.slider-arrows {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 22px;
+}
+
+
+.slider-arrow {
+  width: 52px;
+  height: 52px;
+
+  border:
+    1px solid rgba(244, 197, 66, 0.35);
+
+  border-radius: 50%;
+
+  background: #101010;
+
+  color: #f4c542;
+
+  font-size: 34px;
+
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease,
+    color 0.25s ease;
+}
+
+
+.slider-arrow:hover {
+  background: #d89b16;
+
+  border-color: #d89b16;
+
+  color: #050505;
+}
+
+
+.slider-arrow:active {
+  transform: scale(0.94);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .popular-cars-section {
+    --card-width: 330px;
+    --card-gap: 20px;
+
+    padding-top: 45px;
+  }
+
+  .cars-slider-wrapper {
+    padding-left: 30px;
+  }
+
+  .category-btn {
+    font-size: 15px;
+
+    padding: 0 22px;
+  }
+
+  .popular-cars-title {
+    font-size: 36px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .popular-cars-section {
+    --card-width: 310px;
+    --card-gap: 18px;
+  }
+
+  .popular-cars-title {
+    font-size: 32px;
+
+    padding-bottom: 25px;
+  }
+
+  .category-wrapper {
+    max-width: calc(100% - 30px);
+
+    margin-bottom: 30px;
+  }
+
+  .category-btn {
+    height: 48px;
+
+    font-size: 14px;
+
+    padding: 0 20px;
+  }
+
+  .car-image-wrapper {
+    height: 215px;
+  }
+
+  .car-name {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .popular-cars-section {
+    padding:
+      38px 0 35px;
+
+    --card-width: 300px;
+    --card-gap: 15px;
+  }
+
+
+  /* TITLE */
+
+  .popular-cars-title {
+    padding:
+      0 20px 22px;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+  }
+
+
+  /* CATEGORY */
+
+  .category-wrapper {
+    width: 100%;
+
+    max-width: none;
+
+    padding: 0 15px;
+
+    margin-bottom: 27px;
+
+    gap: 8px;
+  }
+
+
+  .category-btn {
+    height: 46px;
+
+    padding: 0 18px;
+
+    font-size: 14px;
+  }
+
+
+  /* SLIDER */
+
+  .cars-slider-wrapper {
+    padding-left: 15px;
+  }
+
+
+  /* CARD */
+
+  .car-card {
+    border-radius: 18px;
+  }
+
+
+  /* IMAGE */
+
+  .car-image-wrapper {
+    height: 195px;
+
+    margin:
+      12px 12px 0;
+
+    border-radius: 13px;
+  }
+
+
+  /* DETAILS */
+
+  .car-details {
+    padding:
+      16px;
+  }
+
+
+  .car-name {
+    font-size: 19px;
+
+    margin-bottom: 11px;
+  }
+
+
+  .car-price {
+    font-size: 17px;
+
+    margin-bottom: 14px;
+  }
+
+
+  .car-specs,
+  .car-distance {
+    font-size: 14px;
+  }
+
+
+  /* HOST */
+
+  .professional-host {
+    min-height: 44px;
+
+    padding: 0 16px;
+
+    font-size: 15px;
+  }
+
+
+  .host-badge {
+    width: 29px;
+    height: 29px;
+  }
+
+
+  /* DESCRIPTION */
+
+  .popular-cars-description {
+    margin-top: 23px;
+
+    padding:
+      0 18px;
+
+    font-size: 14px;
+  }
+
+
+  .professional-link {
+    font-size: 14px;
+  }
+
+
+  /* ARROWS */
+
+  .slider-arrows {
+    margin-top: 19px;
+
+    gap: 11px;
+  }
+
+
+  .slider-arrow {
+    width: 46px;
+    height: 46px;
+
+    font-size: 29px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .popular-cars-section {
+    --card-width: calc(100vw - 30px);
+
+    --card-gap: 15px;
+
+    padding-top: 32px;
+  }
+
+
+  .popular-cars-title {
+    font-size: 25px;
+
+    padding:
+      0 15px 20px;
+  }
+
+
+  .category-wrapper {
+    padding:
+      0 15px;
+
+    margin-bottom: 23px;
+  }
+
+
+  .category-btn {
+    height: 44px;
+
+    padding:
+      0 17px;
+
+    font-size: 13px;
+  }
+
+
+  .cars-slider-wrapper {
+    padding-left: 15px;
+  }
+
+
+  .car-image-wrapper {
+    height: 205px;
+  }
+
+
+  .car-name {
+    font-size: 18px;
+  }
+
+
+  .car-price {
+    font-size: 16px;
+  }
+
+
+  .car-specs,
+  .car-distance {
+    font-size: 13px;
+  }
+
+
+  .rating-badge {
+    height: 32px;
+
+    padding: 0 9px;
+
+    font-size: 14px;
+  }
+
+
+  .heart-btn {
+    width: 35px;
+    height: 35px;
+
+    font-size: 27px;
+  }
+
+
+  .professional-host {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .popular-cars-title {
+    font-size: 23px;
+  }
+
+  .category-btn {
+    font-size: 12px;
+
+    padding: 0 15px;
+  }
+
+  .car-image-wrapper {
+    height: 190px;
+  }
+}

@@ -1,0 +1,440 @@
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.how-section {
+  width: 100%;
+  background: #050505;
+  padding: 55px 30px 90px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: visible;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.how-heading {
+  margin: 0 0 65px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 600;
+  text-align: center;
+
+  color: #f2b51d;
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================
+   CARDS CONTAINER
+========================================= */
+
+.how-cards {
+  width: min(1055px, 100%);
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   STACKING CARDS
+========================================= */
+
+.how-card {
+  position: sticky;
+  top: 80px;
+
+  z-index: calc(10 + var(--index));
+
+  width: 100%;
+  min-height: 448px;
+
+  margin: 0 0 35px;
+  padding: 47px 35px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  background: #111111;
+
+  border: 1px solid rgba(229, 174, 25, 0.45);
+  border-radius: 40px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   GOLD TOP ACCENT
+========================================= */
+
+.how-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 40px;
+  right: 40px;
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #f2b51d,
+    #ffd75a,
+    #f2b51d,
+    transparent
+  );
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.how-image {
+  width: 265px;
+  height: 355px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  border: 2px solid rgba(242, 181, 29, 0.55);
+
+  background: #1a1a1a;
+}
+
+
+.how-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+
+/* Subtle image zoom */
+
+.how-card:hover .how-image img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.how-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.how-content h3 {
+  margin: 0 0 20px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.how-subtitle {
+  max-width: 650px;
+
+  margin: 0 0 25px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 21px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #d0d0d0;
+}
+
+
+/* =========================================
+   POINTS
+========================================= */
+
+.how-points {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+
+.how-point {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 18px;
+  line-height: 1.4;
+
+  color: #eeeeee;
+}
+
+
+/* =========================================
+   CHECK ICON
+========================================= */
+
+.check {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f2b51d;
+
+  color: #050505;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  box-shadow: 0 0 15px rgba(242, 181, 29, 0.18);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .how-section {
+    padding: 50px 25px 75px;
+  }
+
+  .how-heading {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  .how-card {
+    min-height: 410px;
+
+    padding: 35px 28px;
+
+    gap: 28px;
+
+    border-radius: 32px;
+  }
+
+  .how-image {
+    width: 230px;
+    height: 315px;
+  }
+
+  .how-content h3 {
+    font-size: 35px;
+  }
+
+  .how-subtitle {
+    font-size: 19px;
+  }
+
+  .how-point {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .how-section {
+    padding: 38px 16px 55px;
+  }
+
+  .how-heading {
+    font-size: 30px;
+
+    margin-bottom: 35px;
+
+    letter-spacing: 0;
+  }
+
+
+  .how-cards {
+    width: 100%;
+  }
+
+
+  /* Keep stacking effect */
+
+  .how-card {
+    top: 25px;
+
+    width: 100%;
+
+    min-height: auto;
+
+    margin-bottom: 20px;
+
+    padding: 22px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 24px;
+
+    border-radius: 27px;
+  }
+
+
+  .how-card::before {
+    left: 25px;
+    right: 25px;
+  }
+
+
+  /* IMAGE */
+
+  .how-image {
+    width: 100%;
+    height: 280px;
+
+    border-radius: 18px;
+  }
+
+
+  /* CONTENT */
+
+  .how-content {
+    padding-right: 0;
+  }
+
+
+  .how-content h3 {
+    font-size: 29px;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+
+    letter-spacing: -0.4px;
+  }
+
+
+  .how-subtitle {
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+  }
+
+
+  .how-points {
+    gap: 11px;
+  }
+
+
+  .how-point {
+    font-size: 16px;
+
+    gap: 10px;
+  }
+
+
+  .check {
+    width: 31px;
+    height: 31px;
+
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .how-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .how-heading {
+    font-size: 27px;
+  }
+
+  .how-card {
+    padding: 18px;
+
+    border-radius: 23px;
+
+    gap: 20px;
+  }
+
+  .how-image {
+    height: 240px;
+
+    border-radius: 15px;
+  }
+
+  .how-content h3 {
+    font-size: 25px;
+  }
+
+  .how-subtitle {
+    font-size: 16px;
+  }
+
+  .how-point {
+    font-size: 15px;
+  }
+}

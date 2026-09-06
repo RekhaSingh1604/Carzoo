@@ -1,0 +1,519 @@
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+  width: 100%;
+  background: #050505;
+  color: #ffffff;
+
+  padding: 80px 52px 30px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    1fr
+    1fr
+    1.15fr;
+
+  column-gap: 70px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 42px;
+}
+
+
+/* C icon */
+
+.logo-icon {
+  display: inline-block;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 55px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  color: #d4af37;
+
+  transform: skew(-10deg);
+}
+
+
+/* CarZoo text */
+
+.logo-text {
+  margin-left: -3px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 52px;
+  line-height: 1;
+
+  font-weight: 700;
+
+  letter-spacing: -3px;
+
+  color: #d4af37;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.footer-about {
+  max-width: 390px;
+}
+
+
+.footer-about p {
+  margin: 0;
+
+  color: #cfcfcf;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 17px;
+  line-height: 1.55;
+
+  font-weight: 400;
+}
+
+
+/* Social heading */
+
+.footer-about h3 {
+  margin: 45px 0 18px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   SOCIAL LINKS
+===================================================== */
+
+.social-links {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+
+.social-links a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #444;
+
+  border-radius: 50%;
+
+  color: #d4af37;
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.social-links a:hover {
+  background: #d4af37;
+
+  border-color: #d4af37;
+
+  color: #050505;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER COLUMNS
+===================================================== */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.footer-column h2,
+.footer-contact h2 {
+  margin: 0 0 38px;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 22px;
+  line-height: 1.2;
+
+  font-weight: 600;
+}
+
+
+/* Gold underline */
+
+.footer-column h2::after,
+.footer-contact h2::after {
+  content: "";
+
+  display: block;
+
+  width: 32px;
+  height: 2px;
+
+  margin-top: 12px;
+
+  background: #d4af37;
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.footer-column a {
+  width: fit-content;
+
+  margin-bottom: 17px;
+
+  color: #cfcfcf;
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 17px;
+  line-height: 1.35;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.footer-column a:hover {
+  color: #d4af37;
+
+  transform: translateX(3px);
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.footer-contact p {
+  margin: 0;
+
+  color: #cfcfcf;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   BOTTOM BAR
+===================================================== */
+
+.footer-bottom {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 65px auto 0;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #292929;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: #888;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+}
+
+
+/* Gold highlight */
+
+.footer-bottom span:last-child {
+  color: #b99a3a;
+}
+
+
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .footer {
+    padding: 70px 40px 30px;
+  }
+
+  .footer-container {
+    grid-template-columns:
+      1.2fr
+      1fr
+      1fr;
+
+    gap: 55px 40px;
+  }
+
+  .footer-contact {
+    grid-column: 2 / 4;
+  }
+
+  .footer-about {
+    max-width: 360px;
+  }
+
+  .footer-bottom {
+    margin-top: 55px;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .footer {
+    padding: 60px 35px 28px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px 45px;
+  }
+
+  .footer-about {
+    max-width: 100%;
+  }
+
+  .footer-contact {
+    grid-column: auto;
+  }
+
+  .footer-logo {
+    margin-bottom: 32px;
+  }
+
+  .logo-icon {
+    font-size: 48px;
+  }
+
+  .logo-text {
+    font-size: 45px;
+  }
+
+  .footer-about p,
+  .footer-column a,
+  .footer-contact p {
+    font-size: 16px;
+  }
+
+  .footer-column h2,
+  .footer-contact h2 {
+    font-size: 21px;
+    margin-bottom: 30px;
+  }
+
+  .footer-bottom {
+    margin-top: 50px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .footer {
+    padding: 50px 24px 25px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+  }
+
+  .footer-about,
+  .footer-contact {
+    max-width: 100%;
+  }
+
+  .footer-contact {
+    grid-column: auto;
+  }
+
+
+  /* Logo */
+
+  .footer-logo {
+    margin-bottom: 28px;
+  }
+
+  .logo-icon {
+    font-size: 44px;
+  }
+
+  .logo-text {
+    font-size: 41px;
+    letter-spacing: -2px;
+  }
+
+
+  /* About */
+
+  .footer-about p,
+  .footer-column a,
+  .footer-contact p {
+    font-size: 16px;
+  }
+
+
+  /* Heading */
+
+  .footer-column h2,
+  .footer-contact h2 {
+    margin-bottom: 25px;
+
+    font-size: 20px;
+  }
+
+
+  /* Links */
+
+  .footer-column a {
+    margin-bottom: 16px;
+  }
+
+
+  /* Social */
+
+  .footer-about h3 {
+    margin-top: 35px;
+
+    font-size: 18px;
+  }
+
+
+  /* Bottom */
+
+  .footer-bottom {
+    margin-top: 45px;
+
+    padding-top: 20px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    font-size: 13px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .footer {
+    padding: 42px 18px 22px;
+  }
+
+  .logo-icon {
+    font-size: 40px;
+  }
+
+  .logo-text {
+    font-size: 37px;
+  }
+
+  .footer-about p,
+  .footer-column a,
+  .footer-contact p {
+    font-size: 15px;
+  }
+
+  .footer-column h2,
+  .footer-contact h2 {
+    font-size: 19px;
+  }
+
+  .social-links a {
+    width: 35px;
+    height: 35px;
+  }
+}
