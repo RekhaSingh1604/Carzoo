@@ -26,7 +26,7 @@ const Header = () => {
 
           {/* LOGO */}
           <a href="/" className="logo" aria-label="Carzoo Home">
-            <span className="logo-text">Carzoo</span>
+            <span className="logo-text"> Carzoo</span>
             <span className="logo-line"></span>
           </a>
 
