@@ -36,7 +36,7 @@ const tabs = [
   },
   {
     title: "Bike Rentals",
-    subtitle: "Meet Bikes by Zoomcar",
+    subtitle: "Meet Bikes by CarZoo",
     new: true,
   },
 ];

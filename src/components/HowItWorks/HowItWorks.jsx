@@ -56,7 +56,7 @@ const cards = [
 const HowItWorks = () => {
   return (
     <section className="how-section">
-      <h2 className="how-heading">How Zoomcar works?</h2>
+      <h2 className="how-heading">How CarZoo works?</h2>
 
       <div className="how-cards">
         {cards.map((card, index) => (

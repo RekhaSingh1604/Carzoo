@@ -8,7 +8,7 @@ const stats = [
   },
   {
     number: "25M+",
-    text: "Users trust Zoomcar for easy and affordable car rentals.",
+    text: "Users trust CarZoo for easy and affordable car rentals.",
   },
   {
     number: "40K+",
